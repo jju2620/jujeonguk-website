@@ -570,11 +570,11 @@ const {
 
 /* ------------------------------- DATA ------------------------------- */
 const NAV = [{
-  label: "PROJECTS",
-  href: "#projects"
-}, {
   label: "CAREER",
   href: "#career"
+}, {
+  label: "PROJECTS",
+  href: "#projects"
 }, {
   label: "CREDENTIALS",
   href: "#credentials"
@@ -1213,7 +1213,9 @@ function Art({
         width: "200",
         height: "200",
         fill: "#121212"
-      }), /*#__PURE__*/React.createElement("rect", {
+      }), /*#__PURE__*/React.createElement("g", {
+        transform: "translate(0,-20)"
+      }, /*#__PURE__*/React.createElement("rect", {
         x: "52",
         y: "84",
         width: "96",
@@ -1245,7 +1247,7 @@ function Art({
         fill: "none",
         strokeLinecap: "round",
         strokeLinejoin: "round"
-      }));
+      })));
     case "S2":
       /* 비용 정산·계약 관리 → 정산서 + 원화 */
       return /*#__PURE__*/React.createElement("svg", _extends({
@@ -1254,7 +1256,9 @@ function Art({
         width: "200",
         height: "200",
         fill: "#111827"
-      }), /*#__PURE__*/React.createElement("rect", {
+      }), /*#__PURE__*/React.createElement("g", {
+        transform: "translate(0,6)"
+      }, /*#__PURE__*/React.createElement("rect", {
         x: "62",
         y: "46",
         width: "76",
@@ -1294,7 +1298,7 @@ function Art({
         fontSize: "19",
         fontWeight: "700",
         fill: "#ffffff"
-      }, "\u20A9"));
+      }, "\u20A9")));
     case "S3":
       /* 업무환경·행사 운영 → 데스크 세팅 */
       return /*#__PURE__*/React.createElement("svg", _extends({
@@ -1303,7 +1307,9 @@ function Art({
         width: "200",
         height: "200",
         fill: "#f5c542"
-      }), /*#__PURE__*/React.createElement("rect", {
+      }), /*#__PURE__*/React.createElement("g", {
+        transform: "translate(0,-9)"
+      }, /*#__PURE__*/React.createElement("rect", {
         x: "40",
         y: "140",
         width: "120",
@@ -1359,7 +1365,7 @@ function Art({
         cy: "103",
         r: "9",
         fill: "#2fbf71"
-      }));
+      })));
     /* AI Tool 활용 → 노드 네트워크 + 스파크 */
     case "S4":
       return /*#__PURE__*/React.createElement("svg", _extends({
@@ -1368,7 +1374,9 @@ function Art({
         width: "200",
         height: "200",
         fill: "#111827"
-      }), /*#__PURE__*/React.createElement("line", {
+      }), /*#__PURE__*/React.createElement("g", {
+        transform: "translate(-4,9)"
+      }, /*#__PURE__*/React.createElement("line", {
         x1: "62",
         y1: "72",
         x2: "112",
@@ -1419,7 +1427,7 @@ function Art({
       }), /*#__PURE__*/React.createElement("path", {
         d: "M150 36 l6 15 l15 6 l-15 6 l-6 15 l-6 -15 l-15 -6 l15 -6 z",
         fill: "#f5c542"
-      }));
+      })));
     /* 다양한 사람들과 협업 → 겹친 인물 */
     case "S5":
       return /*#__PURE__*/React.createElement("svg", _extends({
@@ -1428,7 +1436,9 @@ function Art({
         width: "200",
         height: "200",
         fill: "#4f6bff"
-      }), /*#__PURE__*/React.createElement("circle", {
+      }), /*#__PURE__*/React.createElement("g", {
+        transform: "translate(0,-14)"
+      }, /*#__PURE__*/React.createElement("circle", {
         cx: "66",
         cy: "86",
         r: "17",
@@ -1452,7 +1462,7 @@ function Art({
       }), /*#__PURE__*/React.createElement("path", {
         d: "M68 160 a32 32 0 0 1 64 0 z",
         fill: "#f5c542"
-      }));
+      })));
     default:
       return /*#__PURE__*/React.createElement("svg", _extends({
         viewBox: "0 0 400 300"
@@ -1544,7 +1554,7 @@ const DEFAULTS = {
     line2: "데이터로 관리하는 총무입니다."
   },
   about: {
-    bold: "저는 자산·비용·시설·행사를 데이터로 관리하는 총무입니다.",
+    bold: "저는 자산·비용·시설·행사 등의 업무를 데이터로 관리하는 동료입니다.",
     rest: "불편함을 예방하기 위해 노력하는 것이 올바른 업무 방향이라고 생각하며, 구성원이 일에만 몰입할 수 있는 안정적인 업무 환경을 만드는 데 집중합니다."
   },
   stats: [["2년+", "총무·경영지원 경력"], ["5", "경력 & 경험"], ["6", "보유 자격증"], ["IH", "TOEIC Speaking"]],
@@ -1592,7 +1602,7 @@ function Field({
 }
 function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState(0);
+  const [openFaq, setOpenFaq] = useState(-1);
   const [authed, setAuthed] = useState(false);
   const [editing, setEditing] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
